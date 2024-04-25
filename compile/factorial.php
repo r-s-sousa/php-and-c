@@ -10,7 +10,7 @@ function factorial(int $number): string
         throw new Exception('Library not found');
     }
 
-    $output = shell_exec("./factorial $number");
+    $output = shell_exec("$binaryPath $number");
     if ($output === false) {
         throw new Exception('Failed to execute');
     }
